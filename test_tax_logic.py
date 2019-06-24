@@ -12,5 +12,5 @@ def test_wenn_einkommen_zwischen_9169_und_14254_dann_f1():
     einkommen = 12000.34
     assert lg.tax(einkommen) == 475.08
     
-#def test_wenn_einkommen_zwischen_14255_und_55960_dann_f2():
-    #assert lg.tax(40000) == 8569.72
+def test_wenn_einkommen_zwischen_14255_und_55960_dann_f2():
+    assert lg.tax(40000.53) == 8569.72
