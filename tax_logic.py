@@ -1,6 +1,8 @@
+import re
+
 def f1(x):
-    y = 10**4
-    return (980.14 * (x/y) + 1400) * (x/y)
+    y = ((x//1) - 9168) / 10000
+    return float(re.match(r'\d*.\d{2}', str((y * 980.14 + 1400.0) * y)).group(0))
 
 
 def f2(x):
@@ -16,9 +18,6 @@ def f4(x):
 
 
 def tax(x):
-    if x == 9169:
-        return f1(9169)
+    if 9169 <= x <= 14254 :
+        return f1(x)
     return 0
-
-
-print(f1(10))
